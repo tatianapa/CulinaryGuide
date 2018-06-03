@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -15,6 +16,8 @@ import { PlaceComponent } from './place/place.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MenuComponent} from "./menu/menu.component";
 
+
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import {MenuComponent} from "./menu/menu.component";
     MatMenuModule,
     MatToolbarModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
