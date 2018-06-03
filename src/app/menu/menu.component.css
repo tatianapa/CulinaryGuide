@@ -5,3 +5,13 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+h1{
+  color: orangered;
+  font-weight: bold;
+}
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+}
+

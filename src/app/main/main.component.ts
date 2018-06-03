@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   tiles = [
-    {text: '', cols: 1, color: 'transparent'},
-    {text: 'One', cols: 10,  color: 'lightblue'},
-    {text: '', cols: 1,  color: 'transparent'}
+    {text: '',
+      cols: 1, color: 'transparent'},
+    {text: 'Welcome to my Jerusalem Culinary guide - explore the best cafes and restaurants in Jerusalem',
+      cols: 10,  color: 'linen'},
+    {text: '',
+      cols: 1,  color: 'transparent'}
 
 
 
