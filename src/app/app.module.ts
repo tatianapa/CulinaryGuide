@@ -8,6 +8,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -40,6 +41,7 @@ import { TagComponent } from './tag/tag.component';
     MatMenuModule,
     MatToolbarModule,
     MatButtonModule,
+    MatIconModule,
     FlexLayoutModule,
     MatGridListModule,
     AppRoutingModule
