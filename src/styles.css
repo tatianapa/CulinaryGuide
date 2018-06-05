@@ -2,24 +2,9 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body{
-  font-family: 'Montserrat', sans-serif;
-}
-@media (min-width: 620px) {
-  main {
-    column-count: 2;
-    column-gap: 20px;
-  }
-
-  section {
-    break-inside: avoid;
-  }
+  font-family: 'Istok Web', sans-serif;
 }
 
-@media (min-width: 960px) {
-  main {
-    column-count: 3;
-  }
-}
 
 /* styles */
 

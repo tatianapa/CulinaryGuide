@@ -1,0 +1,11 @@
+p{
+  line-height: 1.8;
+}
+@media (min-width: 960px) {
+  #text-container{
+    text-align: center;
+    vertical-align: middle;
+    width: 600px;
+    margin: auto;
+  }
+}
