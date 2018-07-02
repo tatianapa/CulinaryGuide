@@ -9,19 +9,20 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { PlaceComponent } from './place/place.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MenuComponent} from "./menu/menu.component";
 
 
 import 'hammerjs';
 import { ListComponent } from './list/list.component';
-import { TagComponent } from './tag/tag.component';
+import { TagListComponent } from './tag-list/tag-list.component';
+import { PlaceListComponent } from './place-list/place-list.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +30,10 @@ import { TagComponent } from './tag/tag.component';
     MainComponent,
     AboutComponent,
     ContactComponent,
-    PlaceComponent,
     MenuComponent,
     ListComponent,
-    TagComponent
+    TagListComponent,
+    PlaceListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,7 @@ import { TagComponent } from './tag/tag.component';
     MatIconModule,
     FlexLayoutModule,
     MatGridListModule,
+    MatListModule,
     AppRoutingModule
   ],
   providers: [],
