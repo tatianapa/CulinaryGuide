@@ -1,6 +1,8 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Tag } from './tag.model';
+import { TagSearchService } from '../tagSearch.service';
+
 
 @Component({
   selector: 'app-tag-list',
@@ -8,7 +10,7 @@ import { Tag } from './tag.model';
   styleUrls: ['./tag-list.component.css']
 })
 export class TagListComponent implements OnInit {
-
+  @Input() tag: Tag;
   tagList: Tag[] =
   [
     new Tag('Kosher', '#b6ff0a'),
@@ -18,13 +20,13 @@ export class TagListComponent implements OnInit {
     new Tag('Cofee Break', '#cc9b28')
   ];
 
-  constructor() { }
+  constructor(private tagSearchService: TagSearchService) { }
 
   ngOnInit() {
   }
 
   onSelected(){
-    alert("Select works!");
+    this.tagSearchService.tagClicked.emit(this.tag);
   }
 
 }

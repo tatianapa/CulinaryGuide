@@ -23,6 +23,8 @@ import 'hammerjs';
 import { ListComponent } from './list/list.component';
 import { TagListComponent } from './tag-list/tag-list.component';
 import { PlaceListComponent } from './place-list/place-list.component';
+import { TagSearchService } from './tagSearch.service';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,7 @@ import { PlaceListComponent } from './place-list/place-list.component';
     MatListModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TagSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

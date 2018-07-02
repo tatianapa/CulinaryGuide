@@ -43,15 +43,15 @@ export class TagSearchService{
         ] )
       ];
 
-    searchForPlaces(clickedTag: Tag) {
-        for(place in this.places){
-            for(tag in place.tags){
-                if(clickedTag.text == tag)
-                {
-                    
-                }
-            }
-        }
-      }
+    // searchForPlaces(clickedTag: Tag) {
+    //     for(place in this.places){
+    //         for(tag in place.tags){
+    //             if(clickedTag.text == tag)
+    //             {
+
+    //             }
+    //         }
+    //     }
+    //   }
 
 }

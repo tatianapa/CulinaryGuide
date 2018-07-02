@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {AboutComponent} from "./about/about.component";
 import {ContactComponent} from "./contact/contact.component";
-import {PlaceComponent} from "./place/place.component";
+import {Place} from "./place.model";
 import {MainComponent} from "./main/main.component";
 import {ListComponent} from "./list/list.component";
 
