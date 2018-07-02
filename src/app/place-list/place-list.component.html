@@ -1,0 +1,11 @@
+<mat-list>
+  <mat-list-item  *ngFor="let place of places">
+<a class="btn" href="" [ngStyle]="{'background': tag.color}">
+{{place.name}}
+<br>
+{{place.photoLocation}}
+<br>
+{{place.desc}}
+</a>
+  </mat-list-item>
+</mat-list>

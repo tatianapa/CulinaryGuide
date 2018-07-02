@@ -1,0 +1,9 @@
+
+<mat-list>
+    <mat-list-item  *ngFor="let tag of tagList">
+<a class="btn" href="" [ngStyle]="{'background': tag.color}">
+  {{tag.text}}
+</a>
+    </mat-list-item>
+</mat-list>
+

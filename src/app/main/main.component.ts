@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {TagListComponent} from '../tag-list/tag-list.component';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
