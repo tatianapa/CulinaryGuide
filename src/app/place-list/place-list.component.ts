@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Place} from '../place.model';
+import { TagSearchService } from '../tagSearch.service';
+import {Tag} from '../tag-list/tag.model';
 
 @Component({
   selector: 'app-place-list',
@@ -8,11 +10,11 @@ import {Place} from '../place.model';
 })
 export class PlaceListComponent implements OnInit {
 
-  places: Place[];
+  foundPlaces: Place[] = [];
 
-  constructor() { }
+  constructor(private tagSearchService: TagSearchService) { }
 
   ngOnInit() {
+    this.foundPlaces=this.tagSearchService.getFoundPlaces();
   }
-
 }

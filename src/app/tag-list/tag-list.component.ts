@@ -10,8 +10,7 @@ import { TagSearchService } from '../tagSearch.service';
   styleUrls: ['./tag-list.component.css']
 })
 export class TagListComponent implements OnInit {
-  @Input() tag: Tag;
-  tagList: Tag[] =
+tagList: Tag[] =
   [
     new Tag('Kosher', '#b6ff0a'),
     new Tag('Italian', '#ff0ab6'),
@@ -21,12 +20,11 @@ export class TagListComponent implements OnInit {
   ];
 
   constructor(private tagSearchService: TagSearchService) { }
-
   ngOnInit() {
   }
 
-  onSelected(){
-    this.tagSearchService.tagClicked.emit(this.tag);
+  onSelected(tagText: string) {
+    this.tagSearchService.tagClicked(tagText);
   }
 
 }

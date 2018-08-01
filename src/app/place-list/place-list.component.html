@@ -1,11 +1,12 @@
+
+
+
 <mat-list>
-  <mat-list-item  *ngFor="let place of places">
-<a class="btn" href="" [ngStyle]="{'background': tag.color}">
-{{place.name}}
-<br>
-{{place.photoLocation}}
-<br>
-{{place.desc}}
-</a>
-  </mat-list-item>
+    <h3 mat-subheader>Places</h3>
+    <mat-list-item *ngFor="let place of this.foundPlaces">
+      <img matListAvatar src= {{place.photoLocation}} >
+      <h4 mat-line>{{place.name}}</h4>
+      <p mat-line> {{place.desc}}</p>
+    </mat-list-item>
 </mat-list>
+

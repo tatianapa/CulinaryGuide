@@ -1,12 +1,12 @@
-import {Tag} from './tag-list/tag.model';
-import {Place} from './place.model';
-import { TagListComponent } from './tag-list/tag-list.component';
-import { PlaceListComponent } from './place-list/place-list.component';
-import { EventEmitter } from '@angular/core';
 
-export class TagSearchService{
-    tagClicked = new EventEmitter<Tag>();
-    
+import {Place} from './place.model';
+import { Injectable } from '@angular/core';
+
+
+@Injectable()
+export class TagSearchService {
+
+    private foundPlaces: Place[] = [];
     places: Place[] = [
         new Place('Menza', 
         "https://www.itraveljerusalem.com/wp-content/uploads/2017/01/rst-menza-4-1.jpg", 
@@ -35,7 +35,7 @@ export class TagSearchService{
         ] ),
         new Place('Just Meat', 
         "https://media-cdn.tripadvisor.com/media/photo-s/0e/0f/82/5e/just-meat.jpg", 
-        'Best street food in Jerusalem - sandwiches with meat. Unforgettable culinary experience',
+        'Best street food in Jerusalem - meat sandwiches. Unforgettable culinary experience',
         [
             'Kosher',
             'Streetfood',
@@ -43,15 +43,24 @@ export class TagSearchService{
         ] )
       ];
 
-    // searchForPlaces(clickedTag: Tag) {
-    //     for(place in this.places){
-    //         for(tag in place.tags){
-    //             if(clickedTag.text == tag)
-    //             {
-
-    //             }
-    //         }
-    //     }
-    //   }
-
+    
+    tagClicked(tagText: string) 
+    {
+        for(let place of this.places)
+        {
+            for(let placeTag of place.tags)
+            {
+                if(tagText === placeTag)
+                {
+                    this.foundPlaces.push(place);
+                }
+            }
+        
+        }
+    }
+    getFoundPlaces()
+    {
+        return this.foundPlaces;
+    }
+  
 }
