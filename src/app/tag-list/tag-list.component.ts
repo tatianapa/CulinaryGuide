@@ -24,7 +24,8 @@ tagList: Tag[] =
   }
 
   onSelected(tagText: string) {
-    this.tagSearchService.tagClicked(tagText);
+    // this.tagSearchService.Clean();
+    // this.tagSearchService.tagClicked(tagText);
   }
 
 }

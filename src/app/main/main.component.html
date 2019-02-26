@@ -1,22 +1,35 @@
 
 <main>
+    
+    <section class="bigtitle" *ngIf="!loggedIn()">
+        <h2 class="bigtitle-title">Login</h2>
+        <div class="w3-center" >
+          <form  #loginForm="ngForm" class="w3-container w3-card-4" (ngSubmit)="login()">
+        
+            <div class="w3-section">     
+                <label for="username">Username</label> 
+              <input class="w3-input" type="text" name="username" 
+              required required [(ngModel)]="model.username"> 
+             
+            </div>
+            <div class="w3-section">  
+                <label for="password">Password</label>    
+              <input class="w3-input" type="text"  name="password"
+              required  type="password" [(ngModel)]="model.password">
+              
+            </div>
+          
+            <button class="w3-button w3-theme" style="margin-bottom: 20px;"
+            [disabled]="!loginForm.valid" type="submit">Submit</button>
+          </form>
+          </div>
+      </section>
   <section class="bigtitle">
     <h2 class="bigtitle-title">Search the food by categories:</h2>
     <p>Find the best place for dinner according to your criterias - search for kosher, luxury, breakfast and many more categories...</p>
     <app-tag-list></app-tag-list>
     <app-place-list></app-place-list>
     <a href="#" class="info-link">Learn more...</a>
-  </section>
-
-  <section class="bigtitle">
-    <h2 class="bigtitle-title">Top 3 places in Jerusalem:</h2>
-    <ol>
-      <li>Menza</li>
-      <li>Rimon</li>
-      <li>Roladin</li>
-
-    </ol>
-    <a href="#" class="info-link">See all the list...</a>
   </section>
 
   <section class="bigtitle">

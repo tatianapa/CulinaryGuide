@@ -106,3 +106,8 @@ header {
       width: 100%;
   }
 }
+a:hover{
+  color: #5634db;
+  border-bottom: 2px solid #5634db;
+}
+

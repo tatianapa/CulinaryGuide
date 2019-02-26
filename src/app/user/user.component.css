@@ -1,0 +1,26 @@
+
+
+@media (min-width: 960px) {
+    #text-container{
+      text-align: center;
+      vertical-align: middle;
+      width: 600px;
+      margin: auto;
+      line-height: 1.8;
+    }
+  }
+  .social{
+    margin: 5px;
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 960px) {
+    #text-container{
+      text-align: center;
+      vertical-align: middle;
+      margin: auto;
+      padding: 5px;
+    }
+  }
+  

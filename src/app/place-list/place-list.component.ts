@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Place} from '../place.model';
 import { TagSearchService } from '../tagSearch.service';
 import {Tag} from '../tag-list/tag.model';
@@ -12,9 +12,14 @@ export class PlaceListComponent implements OnInit {
 
   foundPlaces: Place[] = [];
 
-  constructor(private tagSearchService: TagSearchService) { }
+  constructor(private tagSearchService: TagSearchService) {
+   }
 
   ngOnInit() {
-    this.foundPlaces=this.tagSearchService.getFoundPlaces();
+    // if(typeof this.foundPlaces !== 'undefined' || this.foundPlaces.length > 0)
+    //     {
+    //      this.foundPlaces = [];
+    //     }
+    // this.foundPlaces = this.tagSearchService.getFoundPlaces();
   }
 }

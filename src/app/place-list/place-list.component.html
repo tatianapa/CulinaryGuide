@@ -1,9 +1,9 @@
 
 
 
-<mat-list>
+<mat-list *ngIf="this.foundPlaces.length > 0">
     <h3 mat-subheader>Places</h3>
-    <mat-list-item *ngFor="let place of this.foundPlaces">
+    <mat-list-item  *ngFor="let place of this.foundPlaces">
       <img matListAvatar src= {{place.photoLocation}} >
       <h4 mat-line>{{place.name}}</h4>
       <p mat-line> {{place.desc}}</p>

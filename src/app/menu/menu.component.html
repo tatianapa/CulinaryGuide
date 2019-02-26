@@ -6,6 +6,8 @@
     <a routerLink="about" class="options-link">About</a>
     <a routerLink="list" class="options-link">List of places</a>
     <a routerLink="contact" class="options-link">Contant</a>
+    <a routerLink="user" class="options-link">User</a>
+    <a *ngIf="loggedIn()" class="options-link" (click)="logout()">Logout</a>
   </div>
   
 </header>
