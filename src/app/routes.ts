@@ -9,6 +9,7 @@ import {MainComponent} from './main/main.component';
 import {ListComponent} from './list/list.component';
 import { UserComponent } from './user/user.component';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -21,7 +22,7 @@ export const appRoutes: Routes = [
       children: [
         { path: 'about', component: AboutComponent},
         { path: 'contact', component: ContactComponent},
-        { path: 'list', component: ListComponent},
+        { path: 'search', component: SearchComponent},
         { path: 'user', component: UserComponent, 
         resolve: {user: UserPageResolver}},
       ]

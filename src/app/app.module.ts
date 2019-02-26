@@ -36,6 +36,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './_services/user.service';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
+import { SearchComponent } from './search/search.component';
 
 export function tokenGetter(){
   return localStorage.getItem('token');
@@ -48,10 +49,10 @@ export function tokenGetter(){
     AboutComponent,
     ContactComponent,
     MenuComponent,
-    ListComponent,
     TagListComponent,
     PlaceListComponent,
-    UserComponent
+    UserComponent, 
+    SearchComponent
   ],
   imports: [
     BrowserModule,

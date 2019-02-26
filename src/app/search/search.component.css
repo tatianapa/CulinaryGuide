@@ -1,0 +1,20 @@
+@media (min-width: 620px) {
+    main {
+      column-count: 2;
+      column-gap: 20px;
+    }
+   
+   
+  }
+  
+  @media (min-width: 960px) {
+    main {
+      column-count: 2;
+    }
+  }
+   /*this line is preventing spreading the text to several columns*/
+  section {
+    break-inside: avoid;
+  }
+  
+  
