@@ -1,0 +1,48 @@
+<section class="bigtitle">
+    <h2 class="bigtitle-title">Sign Up</h2>
+    <div class="w3-row w3-border">
+    
+        <div class="w3-center w3-container" >
+          <h2>Sign up and tell us about your food experience in JLM!</h2>
+            <form  [formGroup]="registerForm" (ngSubmit)="register()" class="w3-container w3-card-4" >
+          
+              <div class="w3-section">     
+                  <label for="username"
+                 >Username</label> 
+
+                <input class="w3-input" type="text" 
+                [ngClass]="{'is-invalid': registerForm.get('username').errors
+                 && registerForm.get('username').touched}"
+                class="form-control"
+                 formControlName="username" 
+                  placeholder="Username"> 
+               
+              </div>
+              <div class="w3-section">     
+
+                  <label for="Known As"
+                  class="invalid-feedback"
+                  *ngIf="registerForm.get('knownAs')
+                  .touched && registerForm.get('knownAs')
+                  .hasError('required')">Known As</label> 
+
+                <input [ngClass]="{'is-invalid': registerForm.get('knownAs').errors && registerForm.get('knownAs').touched}" 
+                class="form-control"
+                      placeholder="Known as" formControlName="knownAs"> 
+               
+              </div>
+              
+              <div class="w3-section">  
+                  <label for="password">Password</label>    
+                <input class="w3-input" type="text"  name="password"
+                required  type="password" [(ngModel)]="model.password">
+                
+              </div>
+            
+              <button class="w3-button w3-theme" style="margin-bottom: 20px;"
+              [disabled]="!loginForm.valid" type="submit">Submit</button>
+            </form>
+            </div>
+            
+    </div>
+  </section>

@@ -23,7 +23,7 @@ import {UserComponent} from './user/user.component';
 
 
 import 'hammerjs';
-import { ListComponent } from './list/list.component';
+
 import { TagListComponent } from './tag-list/tag-list.component';
 import { PlaceListComponent } from './place-list/place-list.component';
 import { TagSearchService } from './tagSearch.service';
@@ -33,10 +33,11 @@ import { AuthGuard } from './_guards/auth.guard';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { JwtModule } from '@auth0/angular-jwt';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './_services/user.service';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
 import { SearchComponent } from './search/search.component';
+import { RegisterComponent } from './register/register.component';
 
 export function tokenGetter(){
   return localStorage.getItem('token');
@@ -52,7 +53,8 @@ export function tokenGetter(){
     TagListComponent,
     PlaceListComponent,
     UserComponent, 
-    SearchComponent
+    SearchComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +77,8 @@ export function tokenGetter(){
               blacklistedRoutes: ['localhost:5000/api/auth']
           }
       }),
-      FormsModule
+      FormsModule,
+      ReactiveFormsModule
   ],
   providers: [
     TagSearchService,

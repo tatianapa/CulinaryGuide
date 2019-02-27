@@ -6,7 +6,6 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {Place} from './place.model';
 import {MainComponent} from './main/main.component';
-import {ListComponent} from './list/list.component';
 import { UserComponent } from './user/user.component';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
 import { SearchComponent } from './search/search.component';

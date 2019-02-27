@@ -4,13 +4,12 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {Place} from './place.model';
 import {MainComponent} from './main/main.component';
-import {ListComponent} from './list/list.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'list', component: ListComponent}
+  {path: 'contact', component: ContactComponent}
   // { path: 'books', component: BooksComponent,
   //   children: [
   //     { path: '', redirectTo: 'books', pathMatch: 'full' },
