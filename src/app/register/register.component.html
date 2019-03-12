@@ -1,48 +1,99 @@
-<section class="bigtitle">
+<main>
+
+  <section class="bigtitle">
     <h2 class="bigtitle-title">Sign Up</h2>
     <div class="w3-row w3-border">
-    
-        <div class="w3-center w3-container" >
-          <h2>Sign up and tell us about your food experience in JLM!</h2>
-            <form  [formGroup]="registerForm" (ngSubmit)="register()" class="w3-container w3-card-4" >
-          
-              <div class="w3-section">     
-                  <label for="username"
-                 >Username</label> 
 
-                <input class="w3-input" type="text" 
-                [ngClass]="{'is-invalid': registerForm.get('username').errors
-                 && registerForm.get('username').touched}"
-                class="form-control"
-                 formControlName="username" 
-                  placeholder="Username"> 
+      <div class="w3-center w3-container">
+
+        <form [formGroup]="registerForm" (ngSubmit)="register()" class="w3-container w3-card-4">
+
+          <div class="w3-section">
+            <label for="username">Username*</label>
+
+            <input class="w3-input" type="text" [ngClass]="{'is-invalid': registerForm.get('username').errors
+                 && registerForm.get('username').touched}" formControlName="username" placeholder="Username">
+                 <div class="invalid-feedback" style="color: red;"
+                 *ngIf="registerForm.get('username').touched && registerForm.get('username').hasError('required')">Please choose a username</div>
+          </div>
+          <div class="w3-section">
+
+            <label for="Known As">Known As*</label>
+
+            <input class="w3-input"
+              [ngClass]="{'is-invalid': registerForm.get('knownAs').errors && registerForm.get('knownAs').touched}"
+              placeholder="Known as" formControlName="knownAs">
+              <div class="invalid-feedback"  style="color: red;"
+              *ngIf="registerForm.get('knownAs').touched && registerForm.get('knownAs').hasError('required')">Known as is required</div>
                
-              </div>
-              <div class="w3-section">     
+          </div>
+          <div class="w3-section">
 
-                  <label for="Known As"
-                  class="invalid-feedback"
-                  *ngIf="registerForm.get('knownAs')
-                  .touched && registerForm.get('knownAs')
-                  .hasError('required')">Known As</label> 
+            <label for="Date of birth">Date of birth*</label>
 
-                <input [ngClass]="{'is-invalid': registerForm.get('knownAs').errors && registerForm.get('knownAs').touched}" 
-                class="form-control"
-                      placeholder="Known as" formControlName="knownAs"> 
-               
-              </div>
-              
-              <div class="w3-section">  
+            <input class="w3-input" type="date" 
+              [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched}"
+              placeholder="Date of Birth" formControlName="dateOfBirth">
+              <div class="invalid-feedback" style="color: red;"
+               *ngIf="registerForm.get('dateOfBirth').touched && registerForm.get('dateOfBirth').hasError('required')">
+                  Date of Birth is required</div>
+          </div>
+          <div class="w3-section">
+
+            <label for="Gender">Gender*</label>
+            <div class="w3-row">
+              <input id="male" class="w3-radio" type="radio"  value="male" formControlName="gender" checked>
+              <label>Male</label>
+              <br>
+              <input id="female" class="w3-radio" type="radio"  value="female" formControlName="gender">
+              <label>Female</label>
+              <br>
+            </div>
+
+
+          </div>
+          <!-- <div class="w3-section">  
                   <label for="password">Password</label>    
                 <input class="w3-input" type="text"  name="password"
                 required  type="password" [(ngModel)]="model.password">
                 
-              </div>
-            
-              <button class="w3-button w3-theme" style="margin-bottom: 20px;"
-              [disabled]="!loginForm.valid" type="submit">Submit</button>
-            </form>
-            </div>
-            
+              </div> -->
+          <!-- <div class="w3-section">  
+                  <label for="password">Password</label>    
+                <input class="w3-input" type="text"  name="password"
+                required  type="password" [(ngModel)]="model.password">
+                
+              </div> -->
+          <div class="w3-section">
+            <label for="password">Password</label>
+            <input type="password" class="w3-input" [ngClass]="{'is-invalid': registerForm.get('password').errors
+                  && registerForm.get('password').touched}" formControlName="password" placeholder="Password">
+            <div class="invalid-feedback" style="color: red;" *ngIf=" registerForm.get('password').hasError('required')
+                   && registerForm.get('password').touched">Password is required</div>
+            <div class="invalid-feedback" style="color: red;" *ngIf=" registerForm.get('password').hasError('minlength')
+                   && registerForm.get('password').touched">Password must be at least 8 characters</div>
+            <div class="invalid-feedback" style="color: red;" *ngIf=" registerForm.get('password').hasError('maxlength')
+                   && registerForm.get('password').touched">Password cannot exceed 10 characters</div>
+          </div>
+
+          <div class="w3-section">
+            <label for="password">Confirm Password</label>
+            <input type="password" class="w3-input" [ngClass]="{'is-invalid': registerForm.get('confirmPassword').errors
+                  && registerForm.get('confirmPassword').touched
+                  || registerForm.get('confirmPassword').touched
+                  && registerForm.hasError('mismatch')}" formControlName="confirmPassword"
+              placeholder="Confirm Password">
+            <div class="invalid-feedback" style="color: red;" *ngIf=" registerForm.get('confirmPassword').hasError('required')
+                    && registerForm.get('confirmPassword').touched">Please confirm the pasword</div>
+            <div class="invalid-feedback" style="color: red;" *ngIf=" registerForm.hasError('mismatch')
+                    && registerForm.get('confirmPassword').touched">Passwords must match</div>
+          </div>
+
+          <button class="w3-button w3-theme" style="margin-bottom: 20px;" [disabled]="!registerForm.valid"
+            type="submit">Submit</button>
+        </form>
+      </div>
+
     </div>
   </section>
+</main>

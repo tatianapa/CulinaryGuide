@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
     this.authService.currentUser = null;
     this.alertify.message('logged out');
 
-    this.router.navigate(['/home']);
+    this.router.navigate(['']);
   }
  
 

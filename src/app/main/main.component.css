@@ -16,6 +16,8 @@
 section {
   break-inside: avoid;
 }
-
+main{
+  column-count: 1;
+}
 
 

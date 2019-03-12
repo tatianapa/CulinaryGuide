@@ -12,7 +12,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
@@ -69,6 +69,7 @@ export function tokenGetter(){
     MatGridListModule,
     MatCardModule,
     MatListModule,
+    NgbDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
           config: {

@@ -9,6 +9,7 @@ import {MainComponent} from './main/main.component';
 import { UserComponent } from './user/user.component';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
 import { SearchComponent } from './search/search.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -20,6 +21,7 @@ export const appRoutes: Routes = [
       // canActivate: [AuthGuard],
       children: [
         { path: 'about', component: AboutComponent},
+        { path: 'register', component: RegisterComponent},
         { path: 'contact', component: ContactComponent},
         { path: 'search', component: SearchComponent},
         { path: 'user', component: UserComponent, 
