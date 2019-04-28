@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
-import {Place} from './place.model';
+import {Place} from './_models/place';
 import {MainComponent} from './main/main.component';
 import { UserComponent } from './user/user.component';
 import { UserPageResolver } from './_resolvers/user_page.resolver';

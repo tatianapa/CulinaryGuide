@@ -38,6 +38,7 @@ import { UserService } from './_services/user.service';
 import { UserPageResolver } from './_resolvers/user_page.resolver';
 import { SearchComponent } from './search/search.component';
 import { RegisterComponent } from './register/register.component';
+import { PlacesService } from './_services/places.service';
 
 export function tokenGetter(){
   return localStorage.getItem('token');
@@ -87,7 +88,8 @@ export function tokenGetter(){
     AlertifyService,
     UserService,
     AuthGuard,
-    UserPageResolver
+    UserPageResolver,
+    PlacesService
   ],
   bootstrap: [AppComponent]
 })

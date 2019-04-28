@@ -24,9 +24,10 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
+  height: 90%;
 }
 
 .title {
@@ -51,6 +52,10 @@ h2 {
 p, ol, li{
   margin-bottom: 1em;
   padding: 0 10px;
+}
+
+p{
+  font-size: 18px;
 }
 
 .info-link {
@@ -88,6 +93,7 @@ section {
 
 .bigtitle {
   padding: 0;
+  
 }
 
 .bigtitle-title {

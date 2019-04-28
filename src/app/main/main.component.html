@@ -10,6 +10,7 @@
                 <button class="w3-button w3-theme" routerLink="register">
                   Click Here to Sign Up!</button>
               <h2>Existing user? Please login to vote for your favorite food places in JLM</h2>
+              <div class="form-center">
                 <form  #loginForm="ngForm" class="w3-container w3-card-4" (ngSubmit)="login()">
               
                   <div class="w3-section">     
@@ -28,6 +29,7 @@
                   <button class="w3-button w3-theme" style="margin-bottom: 20px;"
                   [disabled]="!loginForm.valid" type="submit">Submit</button>
                 </form>
+              </div>
                
                 </div>
                 

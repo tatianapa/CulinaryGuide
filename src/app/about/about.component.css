@@ -1,12 +1,25 @@
 p{
   line-height: 1.8;
+  display: inline-block;
+  margin-bottom: 60px;
+  color: #32383F
 }
+#text-container{
+    
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0, .15);
+ 
+}
+
 @media (min-width: 960px) {
   #text-container{
     text-align: center;
     vertical-align: middle;
-    width: 600px;
-    margin: auto;
+    width: 700px;
+    margin: 30px auto;
   }
 }
 
@@ -14,6 +27,12 @@ p{
   #text-container{
     text-align: center;
     vertical-align: middle;
-    margin: auto;
+    
+  }
+  p{
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 20px;
+    margin-bottom: 40px;
   }
 }
