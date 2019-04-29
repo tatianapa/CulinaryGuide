@@ -113,4 +113,42 @@ section {
   margin-bottom: 10px;
 }
 
+.tags-list li{
+  display: inline;
+  padding: 5px;
+  margin: 5px 10px;
+  font-size: 19px;
+}
+.tag-list ul{
+  margin: 20px;
+  padding: 20px;
+
+}
+.searchByTag, .searchByName{
+  margin: 0 0 50px 0;
+}
+
+.tag-link:link,
+.tag-link {
+display: inline-block;
+font-size: 1.05em;
+color: #fff;
+background-color: #FF851B;
+text-decoration: none;
+padding: .3em 1em;
+border-radius: 1.5em;
+margin: .2em;
+}
+.tag-link:focus,
+.tag-link:hover
+{
+background-color:orange;
+cursor: pointer;
+}
+.place{
+  margin: 50px;
+  border-bottom: 1px solid;
+}
+
+
 

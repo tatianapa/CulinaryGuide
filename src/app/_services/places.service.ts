@@ -27,6 +27,13 @@ getPlaces(): Observable<Place[]>{
         }
         ));
 }
+
+getTags(): Observable<Tag[]>{
+    return this.http.get<Tag[]>(this.baseUrl + 'places/gettags');
+}
+getPlacesForTag(id: number): Observable<Place[]>{
+    return this.http.get<Place[]>(this.baseUrl + 'places/getplacesfortag/' + id);
+}
 }
 
 

@@ -3,21 +3,29 @@
     
     
   <section class="bigtitle">
+    <div class="searchByTag">
     <h2 class="bigtitle-title">Search the food by categories:</h2>
     <p>Find the best place for dinner according to your criterias - search for kosher, luxury, breakfast and many more categories...</p>
-    <app-tag-list></app-tag-list>
+    <ul class="tags-list">
+        <li  *ngFor="let tag of this.tags">
+          <a (click)="getPlaces(tag.tagId)"  class="tag-link">{{tag.text}}</a>
+        </li>
+    </ul>
+    <mat-list *ngIf="this.placesByTag.length > 0">
+        <mat-list-item  class="place" *ngFor="let place of this.placesByTag">
+          <h4 mat-line>{{place.name}}</h4>
+          <p mat-line> {{place.description}}</p>
+        </mat-list-item>
+    </mat-list>
+    </div>
+    <div class="searchByName">
     <h2 class="bigtitle-title">Search by name:</h2>
     <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
     <a href="#" class="info-link">Learn more...</a>
-    
-    <a href="#" class="info-link">Learn more...</a>
+  </div>
   </section>
 
-  <section class="bigtitle">
-      <h2 class="bigtitle-title">Explore the places</h2>
-      <app-place-list></app-place-list>
-   
-  </section>
+ 
 </main>
 
 

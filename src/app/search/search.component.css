@@ -9,12 +9,17 @@
   
   @media (min-width: 960px) {
     main {
-      column-count: 2;
+      column-count: 1;
+      align-content: space-between;
+
     }
   }
    /*this line is preventing spreading the text to several columns*/
   section {
     break-inside: avoid;
+    
   }
+ 
+
   
   
