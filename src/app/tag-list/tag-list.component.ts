@@ -7,7 +7,7 @@ import { TagSearchService } from '../tagSearch.service';
 @Component({
   selector: 'app-tag-list',
   templateUrl: './tag-list.component.html',
-  styleUrls: ['./tag-list.component.css']
+  styleUrls: ['./tag-list.component.scss']
 })
 export class TagListComponent implements OnInit {
 tagList: Tag[] =

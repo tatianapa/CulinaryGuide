@@ -6,7 +6,7 @@ import {Tag} from '../_models/tag';
 @Component({
   selector: 'app-place-list',
   templateUrl: './place-list.component.html',
-  styleUrls: ['./place-list.component.css']
+  styleUrls: ['./place-list.component.scss']
 })
 export class PlaceListComponent implements OnInit {
 

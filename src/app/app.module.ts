@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -53,7 +55,7 @@ export function tokenGetter(){
     MenuComponent,
     TagListComponent,
     PlaceListComponent,
-    UserComponent, 
+    UserComponent,
     SearchComponent,
     RegisterComponent
   ],
@@ -65,11 +67,13 @@ export function tokenGetter(){
     MatMenuModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
     FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
     MatListModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
     NgbDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
