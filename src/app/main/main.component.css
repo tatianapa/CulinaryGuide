@@ -1,10 +1,19 @@
+.btn-signup{
+  background-color: var(--signup-color);
+}
+
+.btn-signin{
+  background-color: var(--signin-color);
+}
+
+
 @media (min-width: 620px) {
   main {
     column-count: 2;
     column-gap: 20px;
   }
- 
- 
+
+
 }
 
 @media (min-width: 960px) {
@@ -23,15 +32,15 @@ main{
 .w3-container .w3-card-4{
   border: none;
   box-shadow: none;
-  
+
 }
 
 form{
   width: 50%;
   margin: 20px auto;
   margin-bottom: 50px;
-  
-  
+
+
 }
 .w3-input{
   text-align: center;
@@ -40,5 +49,10 @@ form{
 
 h2{
   margin: 20px auto;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
 }
 

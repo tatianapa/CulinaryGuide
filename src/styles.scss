@@ -21,6 +21,8 @@ body{
   --header-jlm-color: #ff5252;
   --tag-color: #227093;
   --tag-hover-color: #ff5252;
+  --signup-color: #ff5252;
+  --signin-color: #227093
 }
 
 
@@ -29,6 +31,30 @@ main {
   margin: 0 auto;
   padding: 20px;
   height: 90%;
+}
+
+button{
+  border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
 }
 
 .title {
@@ -41,6 +67,17 @@ main {
 .text-container{
   padding: 30px 200px;
   line-height: 150%;
+}
+
+.btn-main{
+  display: inline-block;
+  font-size: 1.05em;
+  color: #fff;
+  background-color: var(--tag-color);
+  text-decoration: none;
+  padding: .3em 1em;
+  border-radius: 1.5em;
+  margin: .2em;
 }
 
 
