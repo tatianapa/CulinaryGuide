@@ -27,7 +27,7 @@ header {
   width: 20%;
 }
 .header-nav{
-  width: 80%;
+  width: 60%;
   padding-left: 200px;
   display: flex;
   align-items: center;
@@ -42,12 +42,26 @@ header {
 .header-list > li{
   padding-left: 50px;
 }
+
+.header-icons{
+  display: flex;
+  width: 20%;
+}
+
+.social{
+  padding: 0 10px;
+}
+.social > i{
+  color: var(--header-text-color);
+}
 .options-link {
   text-decoration: none;
   color: var(--header-text-color);
   font-size: 1.2em;
 
 }
+
+
 /* @media (min-width: 620px) {
 
   .options-link {

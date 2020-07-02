@@ -1,10 +1,9 @@
 
 <main>
-    
+
     <section class="bigtitle" *ngIf="!loggedIn()">
-        <h2 class="bigtitle-title">Welcome to Jerusalem Culinary Guide!</h2>
         <div class="w3-row w3-border"  >
-        
+
             <div class="w3-center w3-container" >
                 <h2>Sign up and tell us about your food experience in JLM!</h2>
                 <button class="w3-button w3-theme" routerLink="register">
@@ -12,39 +11,39 @@
               <h2>Existing user? Please login to vote for your favorite food places in JLM</h2>
               <div class="form-center">
                 <form  #loginForm="ngForm" class="w3-container w3-card-4" (ngSubmit)="login()">
-              
-                  <div class="w3-section">     
-                      <label for="username">Username</label> 
-                    <input class="w3-input" type="text" name="username" 
-                    required required [(ngModel)]="model.username"> 
-                   
+
+                  <div class="w3-section">
+                      <label for="username">Username</label>
+                    <input class="w3-input" type="text" name="username"
+                    required required [(ngModel)]="model.username">
+
                   </div>
-                  <div class="w3-section">  
-                      <label for="password">Password</label>    
+                  <div class="w3-section">
+                      <label for="password">Password</label>
                     <input class="w3-input" type="text"  name="password"
                     required  type="password" [(ngModel)]="model.password">
-                    
+
                   </div>
-                
+
                   <button class="w3-button w3-theme" style="margin-bottom: 20px;"
                   [disabled]="!loginForm.valid" type="submit">Submit</button>
                 </form>
               </div>
-               
+
                 </div>
-                
+
         </div>
-        
-    
-  
+
+
+
       </section>
-      <section class="bigtitle" *ngIf="loggedIn()">
-          <h2 class="bigtitle-title">Explore the places</h2>
+      <section  *ngIf="loggedIn()">
+          <h2>Explore the places</h2>
            <app-place-list></app-place-list>
       </section>
-      
+
 </main>
-    
+
 
 
 

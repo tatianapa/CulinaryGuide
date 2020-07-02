@@ -1,11 +1,13 @@
 
 <main>
-    
-    
-  <section class="bigtitle">
+
+
+  <section>
+    <div class="text-container">
     <div class="searchByTag">
-    <h2 class="bigtitle-title">Search the food by categories:</h2>
+    <h2>Search the food by categories:</h2>
     <p>Find the best place for dinner according to your criterias - search for kosher, luxury, breakfast and many more categories...</p>
+    </div>
     <ul class="tags-list">
         <li  *ngFor="let tag of this.tags">
           <a (click)="getPlaces(tag.tagId)"  class="tag-link">{{tag.text}}</a>
@@ -18,14 +20,9 @@
         </mat-list-item>
     </mat-list>
     </div>
-    <div class="searchByName">
-    <h2 class="bigtitle-title">Search by name:</h2>
-    <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
-    <a href="#" class="info-link">Learn more...</a>
-  </div>
   </section>
 
- 
+
 </main>
 
 

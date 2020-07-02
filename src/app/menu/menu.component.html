@@ -8,9 +8,20 @@
     <li><a routerLink="" class="options-link link-active">Home</a></li>
     <li><a routerLink="about" class="options-link" >About</a></li>
     <li><a routerLink="search" class="options-link">Search places</a></li>
-    <li><a routerLink="contact" class="options-link">Contant</a></li>
+    <!-- <li><a routerLink="contact" class="options-link">Contant</a></li> -->
     <li><a *ngIf="loggedIn()" routerLink="user" class="options-link">User</a></li>
     <li><a *ngIf="loggedIn()" class="options-link" (click)="logout()">Logout</a></li>
   </ul>
+  </div>
+  <div class="header-icons">
+    <div class="social">
+      <i class="fab fa-facebook-square  fa-3x" ></i>
+    </div>
+    <div class="social">
+      <i class="fab fa-instagram  fa-3x" ></i>
+    </div>
+    <div class="social">
+      <i class="fab fa-google-plus-square  fa-3x" ></i>
+    </div>
   </div>
 </header>

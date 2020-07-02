@@ -16,15 +16,15 @@ import { RegisterComponent } from './register/register.component';
 export const appRoutes: Routes = [
     { path: '', component: MainComponent},
     {
-      path: '', 
+      path: '',
       // runGuardsAndResolvers: 'always',
       // canActivate: [AuthGuard],
       children: [
         { path: 'about', component: AboutComponent},
         { path: 'register', component: RegisterComponent},
-        { path: 'contact', component: ContactComponent},
+        // { path: 'contact', component: ContactComponent},
         { path: 'search', component: SearchComponent},
-        { path: 'user', component: UserComponent, 
+        { path: 'user', component: UserComponent,
         resolve: {user: UserPageResolver}},
       ]
     },
