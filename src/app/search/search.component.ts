@@ -6,7 +6,7 @@ import { Place } from '../_models/place';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
 
@@ -28,6 +28,6 @@ export class SearchComponent implements OnInit {
     );
   }
 
-
+  
 
 }

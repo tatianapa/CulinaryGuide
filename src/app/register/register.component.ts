@@ -9,7 +9,7 @@ import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   //@Input() valuesFromHome: any;
@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
         this.authService.login(this.user).subscribe(()=>{
           this.router.navigate(['/contact']);
         });
-      });
+      }); 
     }
   }
   createRegisterForm(){
@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
   }
   // cancel(){
   //   this.cancelRegister.emit(false);
-
+   
   // }
 
 }
