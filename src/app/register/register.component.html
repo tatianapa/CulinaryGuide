@@ -1,10 +1,10 @@
 <main>
 
-  <section class="bigtitle">
-    <h2 class="bigtitle-title">Sign Up</h2>
+  <section>
+    <h2>Sign Up</h2>
     <div class="w3-row w3-border">
 
-      <div class="w3-center w3-container">
+      <div class="w3-container">
 
         <form [formGroup]="registerForm" (ngSubmit)="register()" class="w3-container w3-card-4">
 
@@ -25,13 +25,13 @@
               placeholder="Known as" formControlName="knownAs">
               <div class="invalid-feedback"  style="color: red;"
               *ngIf="registerForm.get('knownAs').touched && registerForm.get('knownAs').hasError('required')">Known as is required</div>
-               
+
           </div>
           <div class="w3-section">
 
             <label for="Date of birth">Date of birth*</label>
 
-            <input class="w3-input" type="date" 
+            <input class="w3-input" type="date"
               [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched}"
               placeholder="Date of Birth" formControlName="dateOfBirth">
               <div class="invalid-feedback" style="color: red;"
@@ -52,17 +52,17 @@
 
 
           </div>
-          <!-- <div class="w3-section">  
-                  <label for="password">Password</label>    
+          <!-- <div class="w3-section">
+                  <label for="password">Password</label>
                 <input class="w3-input" type="text"  name="password"
                 required  type="password" [(ngModel)]="model.password">
-                
+
               </div> -->
-          <!-- <div class="w3-section">  
-                  <label for="password">Password</label>    
+          <!-- <div class="w3-section">
+                  <label for="password">Password</label>
                 <input class="w3-input" type="text"  name="password"
                 required  type="password" [(ngModel)]="model.password">
-                
+
               </div> -->
           <div class="w3-section">
             <label for="password">Password</label>
