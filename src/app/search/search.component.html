@@ -1,7 +1,5 @@
 
 <main>
-
-
   <section>
     <div class="text-container">
     <div class="searchByTag">
@@ -19,16 +17,13 @@
           <p mat-line> {{place.description}}</p>
         </mat-list-item>
     </mat-list>
-    <mat-list *ngIf="this.placesByTag.length === 0">
+    <mat-list *ngIf="this.noPlacesFound">
       <mat-list-item  class="place">
         <h4 mat-line>No places found for this tag</h4>
       </mat-list-item>
-
     </mat-list>
     </div>
   </section>
-
-
 </main>
 
 

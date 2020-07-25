@@ -12,10 +12,17 @@ export class SearchComponent implements OnInit {
 
   tags: Tag[] = [];
   placesByTag: Place[] = [];
+  noPlacesFound = false;
 
   getPlaces(id: number){
+    this.noPlacesFound = false;
     this.placesService.getPlacesForTag(id).subscribe(
-      places => {this.placesByTag = places as Place[];}
+      places => {
+        this.placesByTag = places as Place[];
+        if(this.placesByTag.length === 0){
+          this.noPlacesFound = true;
+        }
+      }
     );
   }
 
@@ -28,6 +35,6 @@ export class SearchComponent implements OnInit {
     );
   }
 
-  
+
 
 }
