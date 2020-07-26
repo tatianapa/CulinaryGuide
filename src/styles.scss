@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+@import './screenWidthManager.scss';
+
 
 body{
   font-family: 'Lato', sans-serif;
@@ -73,6 +75,9 @@ button{
 .text-container{
   padding: 30px 200px;
   line-height: 150%;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 20px 50px;
+}
 }
 
 .btn-main{

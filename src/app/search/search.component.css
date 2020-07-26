@@ -1,12 +1,12 @@
-@media (min-width: 620px) {
+/* @media (min-width: 620px) {
     main {
       column-count: 2;
       column-gap: 20px;
     }
-   
-   
+
+
   }
-  
+
   @media (min-width: 960px) {
     main {
       column-count: 1;
@@ -15,11 +15,10 @@
     }
   }
    /*this line is preventing spreading the text to several columns*/
-  section {
+  /* section {
     break-inside: avoid;
-    
-  }
- 
 
+  } */
   
-  
+
+
